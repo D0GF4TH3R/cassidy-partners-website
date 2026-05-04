@@ -373,6 +373,56 @@ footer {
   font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: rgba(181,154,106,.4);
 }
 .footer-copy { font-size: 10px; letter-spacing: .12em; color: rgba(245,243,238,.18); }
+.footer-legal {
+  font-size: 10px; letter-spacing: .15em; text-transform: uppercase;
+  color: rgba(245,243,238,.28);
+}
+.footer-legal a {
+  color: inherit; text-decoration: none; margin-right: 24px;
+  transition: color .3s;
+}
+.footer-legal a:last-child { margin-right: 0; }
+.footer-legal a:hover { color: var(--gold); }
+
+/* ── LEGAL PAGES (Impressum / Datenschutz) ─────────────────────────── */
+.legal-section { padding: 140px 60px 120px; background: var(--bone); }
+.legal-content { max-width: 760px; margin: 0 auto; }
+.legal-content .section-title {
+  font-size: clamp(40px, 5vw, 64px); margin-bottom: 16px;
+}
+.legal-content h2 {
+  font-family: 'Cormorant Garamond', serif; font-weight: 400;
+  font-size: 24px; line-height: 1.25; color: var(--ink);
+  margin-top: 48px; margin-bottom: 14px;
+}
+.legal-content h3 {
+  font-family: 'Jost', sans-serif; font-weight: 400;
+  font-size: 11px; letter-spacing: .25em; text-transform: uppercase;
+  color: var(--gold); margin-top: 28px; margin-bottom: 10px;
+}
+.legal-content p {
+  font-size: 15px; line-height: 1.85; color: var(--muted);
+  margin-bottom: 16px;
+}
+.legal-content ul {
+  margin: 0 0 18px 22px; padding: 0;
+}
+.legal-content li {
+  font-size: 15px; line-height: 1.85; color: var(--muted);
+  margin-bottom: 6px;
+}
+.legal-content a {
+  color: var(--gold); text-decoration: none;
+  border-bottom: 1px solid transparent; transition: border-color .3s;
+  word-break: break-word;
+}
+.legal-content a:hover { border-bottom-color: var(--gold); }
+.legal-stand {
+  margin-top: 56px; padding-top: 24px;
+  border-top: 1px solid var(--line);
+  font-style: italic; font-family: 'Cormorant Garamond', serif;
+  font-size: 14px; color: var(--muted);
+}
 
 /* ── ANIMATIONS ────────────────────────────────────────────────────── */
 @keyframes fadeUp {
@@ -401,4 +451,6 @@ footer {
   .contact-vdivider { display: none; }
   .cockpit-mockup { padding: 20px; }
   footer { padding: 24px; flex-direction: column; gap: 12px; text-align: center; }
+  .legal-section { padding: 96px 24px 72px; }
+  .legal-content h2 { font-size: 22px; margin-top: 36px; }
 }
