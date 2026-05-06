@@ -56,6 +56,37 @@ nav {
 }
 .nav-links a:hover { color: var(--gold); }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.nav-lang {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding-left: 24px;
+  border-left: 1px solid var(--line);
+  font-size: 11px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+.nav-lang a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color .3s;
+}
+.nav-lang a:hover {
+  color: var(--gold);
+}
+.nav-lang-active {
+  color: var(--gold);
+}
+.nav-lang-sep {
+  color: var(--muted);
+  opacity: .4;
+}
+
 /* ── HERO ──────────────────────────────────────────────────────────── */
 #hero {
   min-height: 100vh;
@@ -440,6 +471,10 @@ footer {
 @media (max-width: 900px) {
   nav { padding: 20px 24px; }
   .nav-links { display: none; }
+  .nav-lang {
+    padding-left: 0;
+    border-left: none;
+  }
   section { padding: 72px 24px; }
   #hero { padding: 0 24px 72px; }
   .hero-vline { left: 24px; }
