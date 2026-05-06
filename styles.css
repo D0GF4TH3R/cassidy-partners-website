@@ -92,10 +92,12 @@ nav {
   display: none;
   background: none;
   border: none;
-  padding: 0;
+  padding: 13px;
+  margin: -13px;
   cursor: pointer;
   width: 28px;
   height: 18px;
+  box-sizing: content-box;
   position: relative;
 }
 .nav-toggle span {
@@ -541,9 +543,9 @@ footer {
     padding: 8px 24px 24px;
     background: var(--bone);
     border-bottom: 1px solid var(--line);
-    transform: translateY(-110%);
+    transform: translateY(calc(-100% - 100px));
     transition: transform .4s cubic-bezier(.4, 0, .2, 1);
-    z-index: 95;
+    z-index: -1;
   }
   body.nav-open .nav-links {
     transform: translateY(0);

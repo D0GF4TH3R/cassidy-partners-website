@@ -41,16 +41,19 @@ document.fonts.ready.then(() => {
 /* ── 3) Mobile nav toggle ─────────────────────────────────────────── */
 const navToggle = document.querySelector('.nav-toggle');
 const navBackdrop = document.querySelector('.nav-backdrop');
+const navLinksList = document.getElementById('nav-links');
 
 function closeNav() {
   document.body.classList.remove('nav-open');
   if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
+  if (navLinksList) navLinksList.setAttribute('aria-hidden', 'true');
 }
 
 if (navToggle) {
   navToggle.addEventListener('click', () => {
     const opened = document.body.classList.toggle('nav-open');
     navToggle.setAttribute('aria-expanded', String(opened));
+    if (navLinksList) navLinksList.setAttribute('aria-hidden', String(!opened));
   });
 }
 if (navBackdrop) {
